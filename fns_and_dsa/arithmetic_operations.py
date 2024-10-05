@@ -1,20 +1,18 @@
+def perform_operation(num1, num2, operation):
+    result = 0  # Initialize result
+    match operation:
+        case 'add':
+            result = num1 + num2  # Add numbers
+        case 'subtract':
+            result = num1 - num2  # Subtract numbers
+        case 'multiply':
+            result = num1 * num2  # Multiply numbers
+        case 'divide':
+            if num2 == 0:
+                return 'Error: You tried to divide by zero.'  # Handle division by zero
+            else:
+                result = num1 / num2  # Divide numbers
+        case _:
+            return 'Error: Invalid operation.'  # Return an error message for invalid operation
 
-
-def perform_operation(num1, num2 , operation):
-   result = 0
-   match operation:
-    case 'add':
-       result = (num1 + num2) # code for pattern 1
-    case 'subtract':
-        result = (num1 - num2) 
-    case 'multiply':
-        result = (num1 * num2) # code for pattern 1
-    case 'divide':
-       if num2 == 0:
-         result = ('You try to divide by zero.')
-       else:
-         result = (num1 / num2) 
-    case _:
-        print('Choose the operation')
-
-   return result
+    return result
