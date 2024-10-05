@@ -8,10 +8,10 @@ def perform_operation(num1, num2, operation):
         case 'multiply':
             result = num1 * num2  # Multiply numbers
         case 'divide':
-            if num2 == 0:
-                return 'Error: You tried to divide by zero.'  # Handle division by zero
-            else:
-                result = num1 / num2  # Divide numbers
+            if num2 != 0:
+                return    num1 / num2  # Handle division by zero
+            elif num2 == 0 :
+                result =  'Error: You tried to divide by zero.'  # Divide numbers
         case _:
             return 'Error: Invalid operation.'  # Return an error message for invalid operation
 
