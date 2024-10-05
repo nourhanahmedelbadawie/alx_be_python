@@ -1,8 +1,8 @@
 
 
 def perform_operation(num1, num2 , operation):
-  result = 0
-  match operation:
+   result = 0
+   match operation:
     case 'add':
        result = (num1 + num2) # code for pattern 1
     case 'subtract':
@@ -17,4 +17,4 @@ def perform_operation(num1, num2 , operation):
     case _:
         print('Choose the operation')
 
-  return result
+   return result
