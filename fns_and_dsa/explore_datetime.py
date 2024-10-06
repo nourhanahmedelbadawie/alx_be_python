@@ -21,4 +21,4 @@ def calculate_future_date(days):
 
 future_date =   calculate_future_date(days) 
 
-print('future data is ' , future_date)
+print('future data is ' , future_date.strftime('%Y-%m-%d'))
