@@ -1,4 +1,3 @@
-# finance_calculator.py
 
 # Get user input for monthly income and expenses
 monthly_income = float(input("Enter your monthly income: "))
