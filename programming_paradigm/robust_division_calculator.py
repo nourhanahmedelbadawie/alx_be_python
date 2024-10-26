@@ -6,7 +6,7 @@ try:
   denominator = input("Enter denominator:")
   res = safe_divide( numerator  ,  denominator) 
 
-  print(res)
+  print( f"The result of the division is {res}")
   
 except ZeroDivisionError:
   print("Error: Cannot divide by zero.")
