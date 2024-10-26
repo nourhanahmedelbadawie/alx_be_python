@@ -5,9 +5,11 @@ try:
   numerator = input("Enter numerator:")
   denominator = input("Enter denominator:")
   res = safe_divide( numerator  ,  denominator) 
+
+  print(res)
   
 except ZeroDivisionError:
   print("Error: Cannot divide by zero.")
 except ValueError :
-  print("Error: Cannot divide by non number.")
+  print("Error: Please enter numeric values only.")
 
