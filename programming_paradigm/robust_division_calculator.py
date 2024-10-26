@@ -1,5 +1,5 @@
 def safe_divide(numerator, denominator):
-  return  numerator / denominator
+  return  float(numerator)  /  float(denominator)
 
 try:
   numerator = input("Enter numerator:")
