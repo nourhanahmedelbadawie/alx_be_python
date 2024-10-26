@@ -7,7 +7,7 @@ try:
   res = safe_divide( numerator  ,  denominator) 
   
 except ZeroDivisionError:
-  print("Error ZeroDivisionError")
+  print("Error: Cannot divide by zero.")
 except ValueError :
-  print("Error ValueError ")
+  print("Error: Cannot divide by non number.")
 
