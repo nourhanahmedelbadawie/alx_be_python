@@ -14,10 +14,14 @@ def safe_divide(numerator, denominator):
     except ValueError:
         return "Error: Please enter numeric values only."
 
-# Taking user inputs
-numerator = input("Enter the numerator: ")
-denominator = input("Enter the denominator: ")
+# Main logic with error handling for EOFError
+try:
+    numerator = input("Enter the numerator: ")
+    denominator = input("Enter the denominator: ")
 
-# Call the function and display the result or error message
-message = safe_divide(numerator, denominator)
-print(message)
+    # Call the function and display the result or error message
+    message = safe_divide(numerator, denominator)
+    print(message)
+
+except EOFError:
+    print("Error: Input was not received. Please try again.")
