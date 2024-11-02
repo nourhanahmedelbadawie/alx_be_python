@@ -6,13 +6,13 @@ class Shape:
      self.area = area
       
 
-     class Rectangle:
-       def __init__(self ,  length , width):
+class Rectangle:
+      def __init__(self ,  length , width):
         self.area = length * width
       
 
 
 
-        class Circle:
-                 def __init__(self ,  radius ):
+class Circle:
+       def __init__(self ,  radius ):
                   self.area = math.pi * (radius ** 2)
