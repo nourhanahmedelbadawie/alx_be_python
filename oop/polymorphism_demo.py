@@ -15,4 +15,4 @@ class Rectangle(Shape):
 
 class Circle(Shape):
        def __init__(self ,  radius ):
-                  self.area = math.pi * (radius ** 2)
+                  self.area = math.pi * (self.radius ** 2)
