@@ -8,11 +8,14 @@ class Shape:
 
 class Rectangle(Shape):
       def __init__(self ,  length , width):
-        self.area = length * width
+       self.length = length
+       self.width = width
+       self.area = self.length * self.width
       
 
 
 
 class Circle(Shape):
        def __init__(self ,  radius ):
-                  self.area = math.pi * (self.radius ** 2)
+        self.radius = radius
+        self.area = math.pi * (self.radius ** 2)
