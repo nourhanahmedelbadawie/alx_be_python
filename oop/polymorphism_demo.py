@@ -18,8 +18,7 @@ class Rectangle(Shape):
 
     def calculate_area(self):
         """Calculate the area of the rectangle."""
-        self.area = self.length * self.width
-        return self.area
+        return self.length * self.width  # Return area directly
 
 
 class Circle(Shape):
@@ -30,15 +29,14 @@ class Circle(Shape):
 
     def calculate_area(self):
         """Calculate the area of the circle."""
-        self.area = math.pi * (self.radius ** 2)
-        return self.area
+        return math.pi * (self.radius ** 2)  # Return area directly
 
 # Example usage:
 if __name__ == "__main__":
     shapes = [
         Rectangle(5, 10),  # Rectangle with length 5 and width 10
-        Circle(7)         # Circle with radius 7
+        Circle(7)          # Circle with radius 7
     ]
 
     for shape in shapes:
-        print(f"The area of the {shape.__class__.__name__} is: {shape.area}")  # Access area directly without parentheses
+        print(f"The area of the {shape.__class__.__name__} is: {shape.area}")  # Access area directly
