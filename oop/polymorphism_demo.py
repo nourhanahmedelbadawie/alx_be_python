@@ -30,3 +30,16 @@ class Circle(Shape):
     def calculate_area(self):
         """Calculate the area of the circle."""
         return math.pi * (self.radius ** 2)  # Return area directly
+
+
+def main():
+    shapes = [
+        Rectangle(10, 5),  # Create a rectangle with length 10 and width 5
+        Circle(7)          # Create a circle with radius 7
+    ]
+
+    for shape in shapes:
+        print(f"The area of the {shape.__class__.__name__} is: {shape.area}")  # Access area directly
+
+if __name__ == "__main__":
+    main()
