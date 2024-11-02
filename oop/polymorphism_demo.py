@@ -41,4 +41,4 @@ if __name__ == "__main__":
     ]
 
     for shape in shapes:
-        print(f"The area of the {shape.__class__.__name__} is: {shape.area}")  # Access area directly
+        print(f"The area of the {shape.__class__.__name__} is: {shape.area}")  # Access area directly without parentheses
