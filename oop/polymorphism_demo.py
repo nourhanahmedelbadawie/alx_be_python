@@ -1,21 +1,44 @@
 import math
 
 class Shape:
+    def __init__(self):
+        self.area = 0  # Initialize area to 0
 
-   def __init__(self , area):
-     self.area = area
-      
+    def calculate_area(self):
+        """Method to be overridden by derived classes to calculate area."""
+        pass  # Placeholder for derived classes to implement
+
 
 class Rectangle(Shape):
-      def __init__(self ,  length , width):
-       self.length = length
-       self.width = width
-       self.area = self.length * self.width
-      
+    def __init__(self, length, width):
+        super().__init__()  # Initialize the base class
+        self.length = length
+        self.width = width
+        self.area = self.calculate_area()  # Calculate area when initialized
 
+    def calculate_area(self):
+        """Calculate the area of the rectangle."""
+        self.area = self.length * self.width
+        return self.area
 
 
 class Circle(Shape):
-       def __init__(self ,  radius ):
+    def __init__(self, radius):
+        super().__init__()  # Initialize the base class
         self.radius = radius
+        self.area = self.calculate_area()  # Calculate area when initialized
+
+    def calculate_area(self):
+        """Calculate the area of the circle."""
         self.area = math.pi * (self.radius ** 2)
+        return self.area
+
+# Example usage:
+if __name__ == "__main__":
+    shapes = [
+        Rectangle(5, 10),  # Rectangle with length 5 and width 10
+        Circle(7)         # Circle with radius 7
+    ]
+
+    for shape in shapes:
+        print(f"The area of the {shape.__class__.__name__} is: {shape.area}")  # Access area directly
