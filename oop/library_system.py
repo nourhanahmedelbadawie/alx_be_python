@@ -1,30 +1,12 @@
 class Book:
- def __init__(self, title, author):
-  self.title = title
-  self.author = author
-  def __str__(self) -> str:
-        """Return a string representation of the book."""
-        return f"Book: '{self.title}' by {self.author}"
-
-    
-class  EBook(Book):
-   def __init__(self  , title, author , file_size):
-       super().__init__(title, author)
-       self.file_size = file_size
-
-
-class PrintBook(Book): 
-  def __init__(self   , title, author , page_count):
-           super().__init__(title, author)
-           self.page_count = page_count
-   
-
-
-class Book:
     def __init__(self, title, author):
         """Initialize a book with title and author."""
         self.title = title
         self.author = author
+
+    def __str__(self) -> str:
+        """Return a string representation of the book."""
+        return f"Book: {self.title} by {self.author}"
 
 
 class EBook(Book):
@@ -33,12 +15,20 @@ class EBook(Book):
         super().__init__(title, author)
         self.file_size = file_size
 
+    def __str__(self) -> str:
+        """Return a string representation of the eBook."""
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"  # Change MB to KB
+
 
 class PrintBook(Book):
     def __init__(self, title, author, page_count):
         """Initialize a print book with title, author, and page count."""
         super().__init__(title, author)
         self.page_count = page_count
+
+    def __str__(self) -> str:
+        """Return a string representation of the print book."""
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 
 class Library:
@@ -57,20 +47,17 @@ class Library:
             return
         
         for book in self.books:
-            if isinstance(book, EBook):
-                print(f"EBook: '{book.title}' by {book.author}, File Size: {book.file_size} MB")
-            elif isinstance(book, PrintBook):
-                print(f"PrintBook: '{book.title}' by {book.author}, Page Count: {book.page_count}")
-            else:
-                print(f"Book: '{book.title}' by {book.author}")
+            print(book)  # This will use the __str__ method of each book
 
 
 # Example usage
-library = Library()
+if __name__ == "__main__":
+    library = Library()
 
-# Add some books
-library.add_book(EBook("Digital Fortress", "Dan Brown", 2.5))
-library.add_book(PrintBook("The Great Gatsby", "F. Scott Fitzgerald", 218))
+    # Add some books
+    library.add_book(Book("Pride and Prejudice", "Jane Austen"))  # Added without quotes
+    library.add_book(EBook("Snow Crash", "Neal Stephenson", 500))  # File size in KB
+    library.add_book(PrintBook("The Catcher in the Rye", "J.D. Salinger", 234))
 
-# List books in the library
-library.list_books()
+    # List books in the library
+    library.list_books()
