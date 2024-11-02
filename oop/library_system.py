@@ -17,7 +17,7 @@ class EBook(Book):
 
     def __str__(self) -> str:
         """Return a string representation of the eBook."""
-        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"  # Change MB to KB
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"  # Use KB
 
 
 class PrintBook(Book):
@@ -55,8 +55,8 @@ if __name__ == "__main__":
     library = Library()
 
     # Add some books
-    library.add_book(Book("Pride and Prejudice", "Jane Austen"))  # Added without quotes
-    library.add_book(EBook("Snow Crash", "Neal Stephenson", 500))  # File size in KB
+    library.add_book(Book("Pride and Prejudice", "Jane Austen"))
+    library.add_book(EBook("Snow Crash", "Neal Stephenson", 500))
     library.add_book(PrintBook("The Catcher in the Rye", "J.D. Salinger", 234))
 
     # List books in the library
